@@ -316,6 +316,7 @@ $(srctree)/scripts/Kbuild.include: ;
 include $(srctree)/scripts/Kbuild.include
 
 # Make variables (CC, etc...)
+CROSS_COMPILE = arm-linux-
 
 AS		= $(CROSS_COMPILE)as
 # Always use GNU ld
