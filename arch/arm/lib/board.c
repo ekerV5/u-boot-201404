@@ -105,6 +105,7 @@ static int init_baudrate(void)
 static int display_banner(void)
 {
 	printf("\n\n%s\n\n", version_string);
+	printf("by eker\n"); /* add by eker */
 	debug("U-Boot code: %08lX -> %08lX  BSS: -> %08lX\n",
 	       (ulong)&_start,
 	       (ulong)&__bss_start, (ulong)&__bss_end);
@@ -586,7 +587,7 @@ void board_init_r(gd_t *id, ulong dest_addr)
 #endif
 
 #if defined(CONFIG_CMD_ONENAND)
-	onenand_init();
+	// onenand_init();
 #endif
 
 #ifdef CONFIG_GENERIC_MMC
