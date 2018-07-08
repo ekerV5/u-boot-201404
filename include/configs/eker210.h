@@ -36,10 +36,10 @@
 #define CONFIG_SYS_CLK_FREQ_V210		24000000
 
 /* DRAM Base */
-#define CONFIG_SYS_SDRAM_BASE		0x20000000
+#define CONFIG_SYS_SDRAM_BASE		0x30000000 /* modify by eker */
 
 /* Text Base */
-#define CONFIG_SYS_TEXT_BASE		0x20000000 /* modify by eker */
+#define CONFIG_SYS_TEXT_BASE		0x30000000 /* modify by eker */
 
 #define CONFIG_SETUP_MEMORY_TAGS
 #define CONFIG_CMDLINE_TAG
@@ -173,7 +173,7 @@
 /* SMDKC100 has 1 banks of DRAM, we use only one in U-Boot */
 #define CONFIG_NR_DRAM_BANKS	1
 #define PHYS_SDRAM_1		CONFIG_SYS_SDRAM_BASE	/* SDRAM Bank #1 */
-#define PHYS_SDRAM_1_SIZE	(1024 << 20)	/* 0x40000000, 1024 MB Bank #1 */ /* modify by eker */
+#define PHYS_SDRAM_1_SIZE	(512 << 20)	/* 0x20000000, 512 MB Bank #1 */ /* modify by eker */
 
 #define CONFIG_SYS_MONITOR_BASE	0x00000000
 
