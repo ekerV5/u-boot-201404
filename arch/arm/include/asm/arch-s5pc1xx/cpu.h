@@ -61,6 +61,7 @@
 #define S5PV210_VIC1_BASE     0xF2100000
 #define S5PV210_VIC2_BASE     0xF2200000
 #define S5PV210_VIC3_BASE     0xF2300000
+#define S5PV210_NAND_BASE     0xB0E00000
 
 #ifndef __ASSEMBLY__
 #include <asm/io.h>
@@ -112,6 +113,7 @@ SAMSUNG_BASE(watchdog, WATCHDOG_BASE)
 /* add by eker */
 SAMSUNG_BASE(dmc0, DMC0_BASE)
 SAMSUNG_BASE(dmc1, DMC1_BASE)
+SAMSUNG_BASE(nand, NAND_BASE)
 #endif
 
 #endif	/* _S5PC1XX_CPU_H */

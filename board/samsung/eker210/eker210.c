@@ -234,7 +234,7 @@ void copy_bl2_to_ram(void)
 	else if (V210_SDMMC_BASE == 0xEB200000)	// 通道2
 		ch = 2;
 	
-	CopySDMMCtoMem(ch, 32, 400, (unsigned int *)CONFIG_SYS_SDRAM_BASE, 0);
+	CopySDMMCtoMem(ch, 32, 500, (unsigned int *)CONFIG_SYS_SDRAM_BASE, 0);
 }
 
 #endif /* CONFIG_SPL_BUILD (add by eker) */

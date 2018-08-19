@@ -104,6 +104,9 @@ static int init_baudrate(void)
 
 static int display_banner(void)
 {
+	printf("\n########################################");
+	printf("\n# Ported by Eker (eker.ch@foxmail.com) #");
+	printf("\n########################################");
 	printf("\n\n%s\n\n", version_string);
 	printf("by eker\n"); /* add by eker */
 	debug("U-Boot code: %08lX -> %08lX  BSS: -> %08lX\n",

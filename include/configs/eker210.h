@@ -75,7 +75,13 @@
 
 #define CONFIG_CMD_CACHE
 #define CONFIG_CMD_REGINFO
+#if 0
 #define CONFIG_CMD_ONENAND
+#endif
+#define CONFIG_CMD_NAND
+#define CONFIG_SYS_MAX_NAND_DEVICE    1
+#define CONFIG_SYS_NAND_BASE          0xB0E00000
+#define CONFIG_NAND_S5PV210
 #define CONFIG_CMD_ELF
 #define CONFIG_CMD_FAT
 #define CONFIG_CMD_MTDPARTS
@@ -199,7 +205,10 @@
 /*-----------------------------------------------------------------------
  * Boot configuration
  */
+#if 0
 #define CONFIG_ENV_IS_IN_ONENAND	1
+#endif
+#define CONFIG_ENV_IS_IN_NAND
 #define CONFIG_ENV_SIZE			(128 << 10)	/* 128KiB, 0x20000 */
 #define CONFIG_ENV_ADDR			(256 << 10)	/* 256KiB, 0x40000 */
 #define CONFIG_ENV_OFFSET		(256 << 10)	/* 256KiB, 0x40000 */
