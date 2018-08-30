@@ -12,18 +12,19 @@ echo ">>>make:"
 make
 echo ""
 
-echo ">>>rm -f ~/tftpboot/eker210-spl.bin"
-rm -f ~/tftpboot/eker210-spl.bin
-echo ""
+echo "==========Merge spl and u-boot=========="
+echo "rm -f ~/tftpboot/eker210-uboot.bin"
+rm -f ~/tftpboot/eker210-uboot.bin
 
-echo ">>>rm -f ~/tftpboot/u-boot.bin"
-rm -f ~/tftpboot/u-boot.bin
-echo ""
+echo "cp spl/eker210-spl.bin eker210-uboot.bin"
+cp spl/eker210-spl.bin eker210-uboot.bin
 
-echo ">>>cp spl/eker210-spl.bin ~/tftpboot/"
-cp spl/eker210-spl.bin ~/tftpboot/
-echo ""
+echo "truncate eker210-uboot.bin -c -s 16K"
+truncate eker210-uboot.bin -c -s 16K
 
-echo ">>>cp u-boot.bin ~/tftpboot/"
-cp u-boot.bin ~/tftpboot/
+echo "cat u-boot.bin >> eker210-uboot.bin"
+cat u-boot.bin >> eker210-uboot.bin
+
+echo "mv eker210-uboot.bin ~/tftpboot/"
+mv eker210-uboot.bin ~/tftpboot/
 echo ""
