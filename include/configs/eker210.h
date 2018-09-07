@@ -69,6 +69,12 @@
  ***********************************************************/
 #include <config_cmd_default.h>
 
+/* add by eker */
+#define CONFIG_CMD_BOOTMENU
+#define CONFIG_MENU
+#define CONFIG_AUTOBOOT_KEYED
+#define CONFIG_MENU_SHOW
+
 #undef CONFIG_CMD_FLASH
 #undef CONFIG_CMD_IMLS
 #undef CONFIG_CMD_NAND
